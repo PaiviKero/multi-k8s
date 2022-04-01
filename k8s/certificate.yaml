@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: zaffer-one-tls
+spec:
+  secretName: zaffer-one
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: zaffer.one
+  dnsNames:
+    - zaffer.one
+    - www.zaffer.one
